@@ -1,0 +1,14 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - p8l</title>
+      {% else %}
+      <title>Welcome to p8l</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>p8l: <a href="/index">Poolside</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
