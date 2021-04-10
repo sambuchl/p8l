@@ -1,6 +1,34 @@
-2021-04-07 12:26:27,504 INFO: p8l startup [in /Users/sbuchl/Google Drive/htdocs/p8l/app/__init__.py:43]
-2021-04-08 14:24:30,034 INFO: p8l startup [in /Users/sbuchl/Google Drive/htdocs/p8l/app/__init__.py:43]
-2021-04-08 14:24:37,644 INFO: p8l startup [in /Users/sbuchl/Google Drive/htdocs/p8l/app/__init__.py:43]
-2021-04-08 14:57:22,102 INFO: p8l startup [in /Users/sbuchl/Google Drive/htdocs/p8l/app/__init__.py:43]
-2021-04-08 14:58:17,787 INFO: p8l startup [in /Users/sbuchl/Google Drive/htdocs/p8l/app/__init__.py:43]
-2021-04-08 15:25:46,764 INFO: p8l startup [in /Users/sbuchl/Google Drive/htdocs/p8l/app/__init__.py:43]
+2021-04-09 20:26:35,970 ERROR: Exception on /explore [GET] [in /Users/sbuchl/Google Drive/htdocs/p8l/venv/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/Users/sbuchl/Google Drive/htdocs/p8l/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/sbuchl/Google Drive/htdocs/p8l/venv/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/sbuchl/Google Drive/htdocs/p8l/venv/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/sbuchl/Google Drive/htdocs/p8l/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/sbuchl/Google Drive/htdocs/p8l/venv/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/sbuchl/Google Drive/htdocs/p8l/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/sbuchl/Google Drive/htdocs/p8l/venv/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/sbuchl/Google Drive/htdocs/p8l/app/routes.py", line 47, in explore
+    posts = Post.query.order_by(Post).timestamp.desc().all()
+  File "<string>", line 2, in order_by
+  File "/Users/sbuchl/Google Drive/htdocs/p8l/venv/lib/python3.7/site-packages/sqlalchemy/orm/base.py", line 227, in generate
+    fn(self, *args[1:], **kw)
+  File "/Users/sbuchl/Google Drive/htdocs/p8l/venv/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 1948, in order_by
+    criterion = self._adapt_col_list(criterion)
+  File "/Users/sbuchl/Google Drive/htdocs/p8l/venv/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 340, in _adapt_col_list
+    for o in cols
+  File "/Users/sbuchl/Google Drive/htdocs/p8l/venv/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 340, in <listcomp>
+    for o in cols
+  File "/Users/sbuchl/Google Drive/htdocs/p8l/venv/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 4687, in _literal_as_label_reference
+    return _literal_as_text(element)
+  File "/Users/sbuchl/Google Drive/htdocs/p8l/venv/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 4730, in _literal_as_text
+    return _literal_as(element, _no_text_coercion)
+  File "/Users/sbuchl/Google Drive/htdocs/p8l/venv/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 4722, in _literal_as
+    "instead" % type(element)
+sqlalchemy.exc.ArgumentError: SQL expression object expected, got object of type <class 'flask_sqlalchemy.model.DefaultMeta'> instead

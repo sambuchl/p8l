@@ -10,6 +10,7 @@
       <div>
         p8l:
         <a href="{{ url_for('index') }}">P8lside</a>
+        <a href="{{ url_for('explore') }}">Explore</a>
         {% if current_user.is_anonymous %}
         <a href="{{ url_for('login') }}">Login</a>
         {% else %}
