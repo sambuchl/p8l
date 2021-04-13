@@ -32,3 +32,8 @@ Traceback (most recent call last):
   File "/Users/sbuchl/Google Drive/htdocs/p8l/venv/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 4722, in _literal_as
     "instead" % type(element)
 sqlalchemy.exc.ArgumentError: SQL expression object expected, got object of type <class 'flask_sqlalchemy.model.DefaultMeta'> instead
+2021-04-12 21:20:37,597 INFO: p8l startup [in /Users/sbuchl/Google Drive/htdocs/p8l/app/__init__.py:52]
+2021-04-12 21:28:25,310 INFO: p8l startup [in /Users/sbuchl/Google Drive/htdocs/p8l/app/__init__.py:52]
+2021-04-12 21:28:33,404 INFO: p8l startup [in /Users/sbuchl/Google Drive/htdocs/p8l/app/__init__.py:52]
+2021-04-12 21:36:07,601 INFO: p8l startup [in /Users/sbuchl/Google Drive/htdocs/p8l/app/__init__.py:52]
+2021-04-12 21:37:00,560 INFO: p8l startup [in /Users/sbuchl/Google Drive/htdocs/p8l/app/__init__.py:52]
