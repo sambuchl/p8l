@@ -12,6 +12,8 @@ class Config(object):
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
 
+    MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
+
     POSTS_PER_PAGE = 25
 
     SECRET_KEY = os.environ.get('SECRET_GET') or 'let-me-be-one-with-everything-1-!'
